@@ -6,7 +6,8 @@ import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Terminal, Mail, Phone, Linkedin, MapPin, Building, Code, Globe, Sun, Moon } from "lucide-react"
+import { Terminal, Mail, Linkedin, MapPin, Building, Code, Globe, Sun, Moon } from "lucide-react"
+import { DiscordIcon } from "@/components/ui/discord-icon"
 
 interface CVData {
   personalInfo: {
@@ -43,7 +44,7 @@ const cvData: CVData = {
     name: "Juan Ignacio Strack",
     title: "DevOps Engineer | Cloud & Automation Enthusiast",
     email: "juanstrack@gmail.com",
-    phone: "+54 9 343 425 4994",
+    phone: "patos.mates",
     linkedin: "https://www.linkedin.com/in/strack-juan/",
     location: "Argentina",
   },
@@ -127,7 +128,7 @@ const fileContents = {
     "=== CONTACT INFORMATION ===",
     `Name: ${cvData.personalInfo.name}`,
     `Email: ${cvData.personalInfo.email}`,
-    `Phone: ${cvData.personalInfo.phone}`,
+    `Discord: ${cvData.personalInfo.phone}`,
     `LinkedIn: ${cvData.personalInfo.linkedin}`,
     `Location: ${cvData.personalInfo.location}`,
     "",
@@ -290,7 +291,7 @@ export default function InteractiveCV() {
       "=== CONTACT INFORMATION ===",
       `Name: ${cvData.personalInfo.name}`,
       `Email: ${cvData.personalInfo.email}`,
-      `Phone: ${cvData.personalInfo.phone}`,
+      `Discord: ${cvData.personalInfo.phone}`,
       `LinkedIn: ${cvData.personalInfo.linkedin}`,
       `Location: ${cvData.personalInfo.location}`,
       "",
@@ -851,7 +852,7 @@ export default function InteractiveCV() {
                   <span className="text-sm">{cvData.personalInfo.email}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 text-muted-foreground" />
+                  <DiscordIcon className="h-4 w-4 text-muted-foreground" />
                   <span className="text-sm">{cvData.personalInfo.phone}</span>
                 </div>
                 <div className="flex items-center gap-2">
