@@ -6,7 +6,8 @@ import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Terminal, Mail, MessageCircle, Linkedin, MapPin, Building, Code, Globe, Sun, Moon } from "lucide-react"
+import { Terminal, Mail, Linkedin, MapPin, Building, Code, Globe, Sun, Moon } from "lucide-react"
+import { DiscordIcon } from "@/components/ui/discord-icon"
 
 interface CVData {
   personalInfo: {
@@ -851,7 +852,7 @@ export default function InteractiveCV() {
                   <span className="text-sm">{cvData.personalInfo.email}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4 text-muted-foreground" />
+                  <DiscordIcon className="h-4 w-4 text-muted-foreground" />
                   <span className="text-sm">{cvData.personalInfo.phone}</span>
                 </div>
                 <div className="flex items-center gap-2">
